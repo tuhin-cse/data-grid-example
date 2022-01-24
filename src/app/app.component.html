@@ -10,6 +10,29 @@
     <e-column field='duration' headerText='Duration' textAlign='Right' width=110></e-column>
   </e-columns>
 </ejs-treegrid>
+
+<nz-modal [(nzVisible)]="show" nzTitle="Add Column" (nzOnCancel)="show = false" [nzFooter]="null">
+  <ng-container *nzModalContent>
+    <form nz-form nzLayout="vertical" [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <nz-form-label>Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please input column name!">
+          <input  type="text" nz-input formControlName="name" placeholder="Column Name" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Type</nz-form-label>
+        <nz-form-control>
+          <nz-select>
+            <nz-option nzValue="Option 1" nzLabel="Option 1"></nz-option>
+            <nz-option nzValue="Option 2" nzLabel="Option 2"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Add Column</button>
+    </form>
+  </ng-container>
+</nz-modal>
 <style>
   .grid-freezeprop {
     padding-bottom: 5px;

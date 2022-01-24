@@ -6,6 +6,16 @@ import { SortService, ResizeService, ExcelExportService, PdfExportService, Conte
 import { AppComponent } from './app.component';
 import {ButtonModule} from '@syncfusion/ej2-angular-buttons';
 import { DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
+import {TextBoxModule} from '@syncfusion/ej2-angular-inputs';
+import {NzModalModule} from "ng-zorro-antd/modal";
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NzSelectModule} from "ng-zorro-antd/select";
 
 /**
  * Module
@@ -13,9 +23,19 @@ import { DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    TextBoxModule,
     TreeGridModule,
     ButtonModule,
     DropDownListAllModule,
+    DialogModule,
+    NzModalModule,
+    NzButtonModule,
+    NzFormModule,
+    NzCheckboxModule,
+    NzInputModule,
+    ReactiveFormsModule,
+    NzSelectModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
